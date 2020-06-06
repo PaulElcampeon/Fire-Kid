@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -67,6 +68,11 @@ public class GameManager : MonoBehaviour
         Timer.instance.StartSessionTimer();
 
         Debug.Log("Starting timer");
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Pause()
